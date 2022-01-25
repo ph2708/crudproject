@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Button, Checkbox, Form } from "semantic-ui-react";
 import axios from "axios";
-import "./css/create.css";
 
 function Create() {
   const [firstName, setFirstName] = useState("");

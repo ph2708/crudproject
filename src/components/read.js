@@ -14,6 +14,24 @@ export default function Read() {
       });
   }, []);
 
+  const getData = () => {
+    axios
+      .get(`https://61efeb71732d93001778e6ae.mockapi.io/api/v1/fakedata`)
+      .then((getData) => {
+        setAPIData(getData.data);
+      });
+  };
+
+  const onDelete = (id) => {
+    axios
+      .delete(
+        `https://61efeb71732d93001778e6ae.mockapi.io/api/v1/fakedata/${id}`
+      )
+      .then(() => {
+        getData();
+      });
+  };
+
   return (
     <div>
       <Table singleLine>
@@ -34,6 +52,7 @@ export default function Read() {
                 <Table.Cell>
                   {data.checkbox ? "Checked" : "Unchecked"}
                 </Table.Cell>
+                <button onClick={() => onDelete(data.id)}>Delete</button>
               </Table.Row>
             );
           })}

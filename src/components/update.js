@@ -1,2 +1,1 @@
-function update() {}
-export default update;
+export default function Read() {}
