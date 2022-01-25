@@ -9,6 +9,11 @@
 }
 
 .create-form label {
-  color: whitesmoke !important;
+  color: rgb(39, 39, 39) !important;
   font-size: 12px !important;
+}
+
+.create-form-black label {
+  color: rgb(255, 255, 255) !important;
+  font-size: 22px !important;
 }

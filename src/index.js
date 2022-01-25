@@ -12,7 +12,7 @@ ReactDOM.render(
       <Route path="/" element={<App />} />
       <Route exact path="/create" element={<Create />} />
       <Route exact path="/read" element={<Read />} />
-      <Route path="/update" element={<Update />} />
+      <Route exact path="/update" element={<Update />} />
     </Routes>
   </BrowserRouter>,
   document.getElementById("root")
